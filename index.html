@@ -1,1 +1,60 @@
-<p>目前处于测试阶段，页面暂不服务</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彼岸ide下载网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img class="pic" src="https://img.picui.cn/free/2024/08/17/66c043dbabbe2.jpg" alt="背景加载失败！">
+    <div class="ikun" id="homepage" style="left: 250px;width: 60%;height: 94%;">
+        <div id="pages1">
+            <div class="photo-viewer" id="photo" style="left: 50%;transform: translate(-50%, 0%)">
+                <div class="dots">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+                <img id="current-image" src="" alt="预览图片加载失败！">
+            </div>
+            <p id="text" style="top: 200px;position: fixed;font-size: 10px;color: #969696;">*上方是预览图,暂未制作预览图，先放上原神图</p>
+        </div>
+        <div id="pages2" style="display: none;">
+            <h1 id="body-h1" style="min-width: 250px; left: 50%;transform: translate(-50%, 0%);position: fixed;">下载 <i>彼岸ide</i> 安装程序</h1>
+            <div class="warning-box" style="top: 100px;width: 95%;left: 50%;transform: translate(-50%, 0%)">
+                <p class="warning-h" style="font-size: 20px;">　　抱歉</p>
+                <p class="warning-text">　本程序正在开发，暂时无法下载</p>
+            </div>
+            <div style="left: 50%;top:210px;transform: translate(-50%, 0%);position: fixed;">
+                <h3>下载选项：</h3>
+                <p>暂无下载链接</p>
+            </div>
+        </div>
+        <div id="pages3" style="display: none;">
+            <p>　版权：归ikunactrl没有</p>
+        </br>
+        <h3>　特别鸣谢：</h3>
+        <p>　　· github:提供服务器和域名</p>
+        <p>　　· 蓝奏云：提供文件下载和更新</p>
+        <p>　　· ikunactrl：提供蓝奏云直链获取，更新程序制作，ide制作，网站搭建，模块制作</p>
+        </div>
+    </div>
+    <div class="ikun" id="anj" style="opacity: 0.8;top: 0px;width: 200px;height: 100%;">
+        <button class="an2" id="btn1" onclick="qiehuan(1)">预览</button>
+        <button class="an2" id="btn2" onclick="qiehuan(2)">下载</button>
+        <button class="an2" id="btn3" onclick="qiehuan(3)">其他</button>
+    </div>
+    <div class="dhk" id="dhk">
+        <h1 class="bq" id="dhk2">欢迎使用彼岸ide！</h1>
+        <button class="an1" onclick="delyuansu()" id="dhk3"
+            style="width: 150px;height: 50px;font-size: 24px;">确定</button>
+    </div>
+    <p style="position: fixed;left: 50%;transform: translate(-50%, 0%);top: 95%;color: #ffffff;">2024-2024 彼岸ide 版权没有
+    </p>
+    <script src="script.js"></script>
+</body>
+
+</html>

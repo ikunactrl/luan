@@ -1,0 +1,318 @@
+/* styles.css */
+
+.photo-viewer {
+    top: 40px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+    position: fixed;
+}
+
+#current-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+    /* 添加平滑过渡效果 */
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.ikun {
+    border-radius: 15px;
+    left: 0%;
+    transform: translate(0%, 0%);
+    position: fixed;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pic {
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes saykey {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        backdrop-filter: blur(0px);
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        backdrop-filter: blur(10px);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@-webkit-keyframes saykey {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        backdrop-filter: blur(0px);
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        backdrop-filter: blur(10px);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.dhk {
+    position: fixed;
+    animation: saykey 1s;
+    -webkit-animation: saykey 1s;
+    /* Safari 与 Chrome */
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    backdrop-filter: blur(10px);
+    transform: translate(-50%, -50%);
+}
+
+.bq {
+    color: #ffaaaa;
+    font-size: 50px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 450px;
+}
+
+.an1 {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    opacity: 1;
+    position: fixed;
+    width: 120px;
+    height: 40px;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #40B3DF;
+    line-height: 0.5;
+}
+
+.an1:hover {
+    background-color: #0f69c9;
+    width: 130px;
+    height: 50px;
+    left: 60%;
+    top: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.an1:active {
+    width: 120px;
+    height: 40px;
+    left: 60%;
+    top: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.kong {
+    display: "none";
+}
+
+.an2 {
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    opacity: 1;
+    background-color: #00000000;
+    line-height: 0.5;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.an2:hover {
+    background-color: #d8d8d8;
+}
+
+.an2:active {
+    background-color: #bebebe;
+}
+
+@keyframes keyhd1 {
+    0% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, 0%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, -120%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@-webkit-keyframes keyhd1 {
+    0% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, 0%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, -120%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes keyhd2 {
+    0% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, 120%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, 0%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@-webkit-keyframes keyhd2 {
+    0% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, 120%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        border-radius: 15px;
+        left: 250px;
+        transform: translate(0%, 0%);
+        position: fixed;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.keyhd1 {
+    animation: keyhd1 1s;
+    -webkit-animation: keyhd1 1s;
+
+    border-radius: 15px;
+    left: 250px;
+    transform: translate(0%, 120%);
+    position: fixed;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.keyhd2 {
+    animation: keyhd2 1s;
+    -webkit-animation: keyhd2 1s;
+    border-radius: 15px;
+    left: 250px;
+    transform: translate(0%, 0%);
+    position: fixed;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.warning-box {
+
+    background-color: #FFF3CD;
+    min-width: 200px;
+    /*width: 400px;*/
+    position: fixed;
+    min-height: 20px;
+    border-left: 7px solid #ffd17b; /* 橙色边框 */
+}
+.warning-h {
+    color: #ffd17b
+}
+
+.warning-text {
+    color: #000000;
+}
