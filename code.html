@@ -1,0 +1,75 @@
+附魔表/*/--[[
+id  name  最大值
+5   击飞  5
+
+6   锐利  5
+
+7   人类  5
+    猎手
+
+8   动物  5
+    猎手
+
+9   魔物  5
+    猎手
+
+10  点燃  5
+
+11  击退  5
+
+12  狩猎  3
+    幸运
+
+13  强力  5
+    射击
+
+14  无限  5
+    射击
+
+15  耐久  5
+
+16  近战  5
+    抗性
+
+17  远战  5
+    抗性
+
+18  爆炸  5
+    抗性
+
+22  反击  5
+
+25  速度  5
+
+27  爆炸  1
+    射击
+
+28  龙之  1
+    降落
+--]]&附魔/*/local function Y(e)
+    if (e.uielement == [[7378333749899702984_17]]) then
+        local result, itemid, num = Backpack:getGridItemID(e.eventobjid, 29)
+        if num > 0 then --如果有物品
+            Game:msgBox([[请把背包最后一格物品清除！]])
+        else
+            Backpack:setGridItem(e.eventobjid, 29, 11668, 200, nil)
+
+            local result, num, array = Backpack:getBackpackBarValidList(e.eventobjid, 1)
+            if result == 0 then
+                for i, a in ipairs(array) do
+                    local result, itemid, num = Backpack:getGridItemID(e.eventobjid, a)
+                    local result, id = Player:getCurToolID(e.eventobjid)
+                    if itemid == id then
+                        Backpack:moveGridItem(e.eventobjid, 29, id)
+                        Actor:addEnchant(e.eventobjid, 5, 27, 1)
+                        Actor:addEnchant(e.eventobjid, 5, 13, 5)
+                        Actor:addEnchant(e.eventobjid, 5, 10, 5)
+                        Actor:addEnchant(e.eventobjid, 5, 5, 5)
+                        Actor:addEnchant(e.eventobjid, 5, 14, 5)
+                        Backpack:moveGridItem(e.eventobjid, id, 29)
+                    end
+                end
+            end
+        end
+    end
+end
